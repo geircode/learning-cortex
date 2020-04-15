@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  learning_cortex:
+    image: geircode/learning_cortex:latest
+    build:
+      context: .
+      dockerfile: Dockerfile    
+    container_name: learning_cortex-1
+    volumes:
+      # - ".:/app"       
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - learning_cortex_network
+networks:
+  learning_cortex_network:
+    name: learning_cortex_network
+    external: true
+          

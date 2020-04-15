@@ -1,0 +1,1 @@
+docker exec -it learning_cortex-filecontainer-1 /bin/sh

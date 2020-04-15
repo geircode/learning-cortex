@@ -1,0 +1,1 @@
+docker exec -it learning_cortex-1 /bin/bash
