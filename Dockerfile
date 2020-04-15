@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . /app
 
 RUN apt-get update
-RUN apt-get install -y git dos2unix unzip
+RUN apt-get install -y git dos2unix unzip htop
 
 RUN pip install -r requirements.txt 
 
@@ -18,5 +18,7 @@ RUN ls -al
 RUN tar --strip-components=1 -xvzf docker.tgz -C /usr/local/bin
 
 RUN rm *
+
+WORKDIR /app
 
 ENTRYPOINT tail -f /dev/null

@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   learning_cortex-filecontainer:
-    image: ${DOCKER_REGISTRY}/geircode/learning_cortex-filecontainer:latest
+    image: geircode/learning_cortex-filecontainer:latest
     build:
       context: .
       dockerfile: Dockerfile
